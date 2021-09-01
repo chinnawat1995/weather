@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Nunito";
+    font-weight: 700;
+    src: url("/fonts/Nunito-Regular.woff") format("woff");
+  }
+}
+
+@layer components {
+  .detail-weather-today-list {
+    @apply flex flex-row p-2 items-center bg-black bg-opacity-30 backdrop-filter backdrop-blur-md rounded-md
+  }
+
+  .daily-list {
+    @apply flex flex-col items-center text-white space-y-1 bg-gray-900 bg-opacity-20 backdrop-filter backdrop-blur-md py-3 px-7 rounded-md
+  }
+
+  .underline-red {
+    text-decoration-color: red
+  }
+}
